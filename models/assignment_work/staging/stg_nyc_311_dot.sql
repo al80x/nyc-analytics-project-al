@@ -88,7 +88,7 @@ cleaned AS (
    AND borough IS NOT NULL
 
    -- Deduplicate
---   QUALIFY ROW_NUMBER() OVER (PARTITION BY unique_key ORDER BY created_date DESC) = 1
+   QUALIFY ROW_NUMBER() OVER (PARTITION BY unique_key ORDER BY unique_key DESC) = 1
 )
 
 SELECT * FROM cleaned
