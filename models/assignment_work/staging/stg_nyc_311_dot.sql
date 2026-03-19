@@ -33,8 +33,8 @@ cleaned AS (
        CAST(unique_key AS STRING) AS request_id,
 
        -- Date/Time
-       CAST(created_date AS TIMESTAMP) AS created_date,
-       CAST(closed_date AS TIMESTAMP) AS closed_date,
+       --CAST(created_date AS TIMESTAMP) AS created_date,
+       --CAST(closed_date AS TIMESTAMP) AS closed_date,
 
        -- Request details
        CAST(agency AS STRING) AS agency,
