@@ -84,11 +84,11 @@ cleaned AS (
    WHERE (agency = 'DOT' OR agency_name LIKE '%Transportation%')
    AND unique_key IS NOT NULL
    AND created_date IS NOT NULL
-   AND CAST(created_date AS DATE) >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 YEAR)
+--   AND CAST(created_date AS DATE) >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 YEAR)
    AND borough IS NOT NULL
 
    -- Deduplicate
-   QUALIFY ROW_NUMBER() OVER (PARTITION BY unique_key ORDER BY unique_key DESC) = 1
+   QUALIFY ROW_NUMBER() OVER (PARTITION BY unique_key ORDER BY created_date DESC) = 1
 )
 
 SELECT * FROM cleaned
