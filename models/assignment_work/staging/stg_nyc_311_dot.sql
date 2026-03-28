@@ -33,7 +33,6 @@ cleaned AS (
        CAST(unique_key AS STRING) AS request_id,
 
        -- Date/Time
-       FORMAT_DATETIME("%Y-%m-%d %H:%M:%S", created_date) AS created_date,
        CAST(created_date AS TIMESTAMP) AS created_date,
        --CAST(closed_date AS TIMESTAMP) AS closed_date,
 
