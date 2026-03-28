@@ -34,7 +34,7 @@ cleaned AS (
 
        -- Date/Time
        CAST(created_date AS TIMESTAMP) AS created_date,
-       --CAST(closed_date AS TIMESTAMP) AS closed_date,
+       CAST(closed_date AS TIMESTAMP) AS closed_date,
 
        -- Request details
        CAST(agency AS STRING) AS agency,
