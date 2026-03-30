@@ -75,7 +75,7 @@ cleaned AS (
 
        --  standardizing building number
        CASE
-           WHEN TRIM(CAST(bulding_number AS STRING)) IN ('undefined') THEN NULL
+           WHEN UPPER(TRIM(CAST(bulding_number AS STRING))) = 'UNDEFINED' THEN NULL
        END AS building_number,
 
        CAST(business_address AS STRING) AS business_address,
