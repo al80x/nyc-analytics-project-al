@@ -37,7 +37,6 @@ cleaned AS (
 
        -- Date/Time
        CAST(time_of_submission AS TIMESTAMP) AS time_of_submission,
-
        -- Request details
        CAST(restaurant_name AS STRING) AS restaurant_name,
        CAST(legal_business_name AS STRING) AS legal_business_name,
