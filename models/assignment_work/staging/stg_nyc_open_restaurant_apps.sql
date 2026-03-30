@@ -28,7 +28,7 @@ cleaned AS (
           roadway_dimensions_area,
           time_of_submission,  
           latitude,  
-          longitude,  
+          longitude
        ),
 
        -- Identifiers
@@ -37,10 +37,12 @@ cleaned AS (
 
        -- Date/Time
        CAST(time_of_submission AS TIMESTAMP) AS time_of_submission,
+       
        -- Request details
        CAST(restaurant_name AS STRING) AS restaurant_name,
        CAST(legal_business_name AS STRING) AS legal_business_name,
        CAST(doing_business_as_dba AS STRING) AS doing_business_as_dba,
+
        -- Dimensions
        CAST(sidewalk_dimensions_length AS INT) AS sidewalk_dimensions_length,
        CAST(sidewalk_dimensions_width AS INT) AS sidewalk_dimensions_width,
