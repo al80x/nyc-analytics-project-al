@@ -13,7 +13,7 @@ agency_dimension AS (
        {{ dbt_utils.generate_surrogate_key([
            'agency_name',
            'agency_type'
-       ]) }} AS agency_key, -- TODO: figure out how to generate int surrogate key
+       ]) }} AS agency_key,
        agency_name,
        agency_type
 
